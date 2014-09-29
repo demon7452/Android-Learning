@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.showactivity"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="20" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.showactivity.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--该Activity未设置任何的intent-filter,用显示的方式显示Activity  -->
+        <activity
+            android:name="com.example.showactivity.MyActivity1"
+            android:label="@string/title_activity_my_activity1" >
+        </activity>
+        <!-- 该Activity中定义了两个intent-filter,在第二个中定义了两个category -->
+        <activity
+            android:name="com.example.showactivity.MyActivity2"
+            android:label="@string/title_activity_my_activity2" 
+            android:icon="@drawable/icon">
+            <intent-filter>
+                <action android:name="myAction1"/>
+                <category android:name="android.intent.category.DEFAULT"/>"
+            </intent-filter>
+            <!-- 这个intent-filter与Activity3中的intent-filter相同 -->
+            <intent-filter >
+                <action android:name="myAction2"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="myCategory"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.showactivity.MyActivity3"
+            android:label="@string/title_activity_my_activity3" 
+            android:icon="@drawable/icon3">
+            <!-- 隐式显示Activity时在屏幕上会弹出一个列表，允许用户选择哪个Activity -->
+            <intent-filter >
+                <action android:name="myAction2"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="myCategory"/>"
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

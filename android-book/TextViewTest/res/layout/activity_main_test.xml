@@ -1,0 +1,53 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/show_richText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="click_show_richText"
+        android:text="显示富文本" />
+
+    <Button
+        android:id="@+id/text_image"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="click_text_image"
+        android:text="显示表情图像和文字" />
+
+    <Button
+        android:id="@+id/link_activity"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="click_link_activity"
+        android:text="单击链接Activity" />
+
+    <Button
+        android:id="@+id/text_background"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="click_text_background"
+        android:text="为指定文本添加背景" />
+
+    <Button
+        android:id="@+id/Button02"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/Button01"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+
+</LinearLayout>

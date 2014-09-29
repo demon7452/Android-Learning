@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.translatedata"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <application
+        android:name="com.example.translatedata.AllData"
+        android:allowBackup="true"
+        android:icon="@drawable/new_icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.translatedata.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.translatedata.IntentActivity"
+            android:label="@string/title_activity_intent" >
+        </activity>
+        <activity
+            android:name="com.example.translatedata.StaticVariableActivity"
+            android:label="@string/title_activity_static_variable" >
+        </activity>
+        <activity
+            android:name="com.example.translatedata.ClipboardActivity"
+            android:label="@string/title_activity_clipboard" >
+        </activity>
+        <activity
+            android:name="com.example.translatedata.AllDataActivity"
+            android:label="@string/title_activity_all_data" >
+        </activity>
+        <activity
+            android:name="com.example.translatedata.ReturnDataActivity"
+            android:label="@string/title_activity_return_data" >
+        </activity>
+    </application>
+
+</manifest>
