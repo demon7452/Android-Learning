@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background" >
+    
+    
+    <EditText 
+        android:id="@+id/editText"
+        android:hint="@string/hello_world"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="40sp" />
+    <Button 
+        android:id="@+id/btSure"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="btSure"
+        android:text="@string/btSure"/>
+    
+    
+
+</LinearLayout>

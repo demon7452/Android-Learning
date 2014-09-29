@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TranslateData</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_intent">IntentActivity</string>
+    <string name="btIntent">通过Intent传递参数</string>
+    <string name="title_activity_static">StaticActivity</string>
+    <string name="title_activity_static_variable">StaticVariableActivity</string>
+    <string name="btStatic">使用静态变量传递数据</string>
+    <string name="btClipboard">使用剪切板传递数据</string>
+    <string name="title_activity_clipboard">ClipboardActivity</string>
+    <string name="title_activity_all_data">AllDataActivity</string>
+    <string name="btAllData">通过全局对象传递数据</string>
+    <string name="title_activity_return_data">ReturnDataActivity</string>
+    <string name="btSure">确定</string>
+
+</resources>
