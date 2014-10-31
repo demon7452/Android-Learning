@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Intent</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_activity01">Activity01</string>
+    <string name="activity01">first activity</string>
+    <string name="button">切换</string>
+    <string name="title_activity_activity02">Activity02</string>
+    <string name="activity02">second activity</string>
+
+</resources>
