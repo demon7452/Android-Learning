@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">谷歌训练</string>
+    <string name="edit_message">输入内容</string>
+    <string name="button_send">发送</string>
+</resources>
