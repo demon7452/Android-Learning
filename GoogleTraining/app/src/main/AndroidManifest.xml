@@ -20,7 +20,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.DisplayMessageActivity" />
-        <activity android:name=".activities.FragmentActivity"></activity>
+        <activity android:name=".activities.FragmentActivity" />
+        <activity android:name=".activities.DatabaseActivity"></activity>
     </application>
 
 </manifest>

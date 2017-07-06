@@ -6,4 +6,13 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="button_fragment">fragment</string>
+    <string name="button_database">database</string>
+
+    <!-- database contract -->
+    <string name="db_name">Name:</string>
+    <string name="db_age">Age:</string>
+    <string name="db_phone">Phone:</string>
+    <string name="db_native_language">Native Language:</string>
+    <string name="db_save">Save</string>
+    <string name="db_clear">Clear</string>
 </resources>
