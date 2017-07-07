@@ -22,7 +22,14 @@
         <activity android:name=".activities.DisplayMessageActivity" />
         <activity android:name=".activities.FragmentActivity" />
         <activity android:name=".activities.DatabaseActivity" />
-        <activity android:name=".activities.IntentActivity"></activity>
+        <activity android:name=".activities.IntentActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="text/plain"/>
+                <data android:mimeType="image/*"/>
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

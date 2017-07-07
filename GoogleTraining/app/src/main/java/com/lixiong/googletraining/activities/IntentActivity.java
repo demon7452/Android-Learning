@@ -7,8 +7,10 @@ import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.lixiong.googletraining.R;
 
@@ -23,6 +25,17 @@ public class IntentActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intent);
+
+        Uri data = getIntent().getData();
+        if(null != data){
+            TextView textView = new TextView(this);
+            textView.setTextSize(40);
+            textView.setText(R.string.intent_browser);
+            ViewGroup viewGroup = (ViewGroup) findViewById(R.id.intent_display);
+            viewGroup.addView(textView);
+            setResult(RESULT_OK);
+            finish();
+        }
     }
 
     @Override
@@ -75,7 +88,6 @@ public class IntentActivity extends AppCompatActivity {
         emailIntent.putExtra(Intent.EXTRA_TEXT, "Email message text");
         emailIntent.putExtra(Intent.EXTRA_STREAM, Uri.parse("content://path/to/email/attachment"));
 // You can also attach multiple items by passing an ArrayList of Uris
-
         String title = getResources().getString(R.string.intent_chooser);
         Intent chooser = Intent.createChooser(emailIntent, title);
 
