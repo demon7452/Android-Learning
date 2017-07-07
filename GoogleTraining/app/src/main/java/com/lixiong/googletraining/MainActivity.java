@@ -10,6 +10,7 @@ import android.widget.EditText;
 import com.lixiong.googletraining.activities.DatabaseActivity;
 import com.lixiong.googletraining.activities.DisplayMessageActivity;
 import com.lixiong.googletraining.activities.FragmentActivity;
+import com.lixiong.googletraining.activities.IntentActivity;
 
 import java.io.FileOutputStream;
 
@@ -41,6 +42,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void openDatabase(View view){
         startActivity(new Intent(this, DatabaseActivity.class));
+    }
+
+    public void openIntent(View view){
+        startActivity(new Intent(this, IntentActivity.class));
     }
 
     private void saveFile(String text){

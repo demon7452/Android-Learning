@@ -21,7 +21,8 @@
         </activity>
         <activity android:name=".activities.DisplayMessageActivity" />
         <activity android:name=".activities.FragmentActivity" />
-        <activity android:name=".activities.DatabaseActivity"></activity>
+        <activity android:name=".activities.DatabaseActivity" />
+        <activity android:name=".activities.IntentActivity"></activity>
     </application>
 
 </manifest>

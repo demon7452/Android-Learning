@@ -30,4 +30,11 @@
         android:layout_height="wrap_content"
         android:text="@string/button_database"
         android:onClick="openDatabase"/>
+
+    <Button
+        android:id="@+id/button_intent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_intent"
+        android:onClick="openIntent"/>
 </LinearLayout>

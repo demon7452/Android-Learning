@@ -7,6 +7,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="button_fragment">fragment</string>
     <string name="button_database">database</string>
+    <string name="button_intent">ImplicitIntent</string>
 
     <!-- database contract -->
     <string name="db_name">Name:</string>
@@ -15,4 +16,11 @@
     <string name="db_native_language">Native Language:</string>
     <string name="db_save">Save</string>
     <string name="db_clear">Clear</string>
+
+    <!-- Implicit intent-->
+    <string name="intent_call">Call</string>
+    <string name="intent_map">Map</string>
+    <string name="intent_browser">Browser</string>
+    <string name="intent_email">Email</string>
+    <string name="intent_chooser">Open with</string>
 </resources>
