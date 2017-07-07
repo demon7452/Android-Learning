@@ -1,19 +1,52 @@
 package com.lixiong.googletraining.activities;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 import com.lixiong.googletraining.R;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class IntentActivity extends AppCompatActivity {
+
+    private static final int PICK_CONTACT_REQUEST  = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intent);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(PICK_CONTACT_REQUEST == requestCode){
+            if(RESULT_OK == resultCode){
+                Uri contacts = data.getData();
+                String[] projection = {ContactsContract.CommonDataKinds.Phone.NUMBER, ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME};
+
+                Cursor cursor = getContentResolver().query(contacts, projection, null, null,null);
+                if (null == cursor){
+                    return;
+                }
+                List<String> contactList = new ArrayList<>();
+                while (cursor.moveToNext()){
+                    contactList.add(cursor.getString(cursor.getColumnIndexOrThrow(ContactsContract.CommonDataKinds.Phone.NUMBER)));
+                    contactList.add(cursor.getString(cursor.getColumnIndexOrThrow(ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME)));
+                }
+
+                ListView listView = (ListView)findViewById(R.id.contact_list);
+                listView.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_expandable_list_item_1, contactList));
+                cursor.close();
+            }
+        }
     }
 
     public void intentCall(View view){
@@ -55,6 +88,14 @@ public class IntentActivity extends AppCompatActivity {
         String title = getResources().getString(R.string.intent_chooser);
         Intent chooser = Intent.createChooser(webIntent, title);
         startActivityWithCheck(chooser);
+    }
+
+    public void intentContact(View view){
+        Intent contactIntent = new Intent(Intent.ACTION_PICK, Uri.parse("content://contacts"));
+        contactIntent.setType(ContactsContract.CommonDataKinds.Phone.CONTENT_TYPE);// Show user only contacts w/ phone numbers
+        if(null != contactIntent.resolveActivity(getPackageManager())) {
+            startActivityForResult(contactIntent, PICK_CONTACT_REQUEST);
+        }
     }
 
     private void startActivityWithCheck(Intent intent){

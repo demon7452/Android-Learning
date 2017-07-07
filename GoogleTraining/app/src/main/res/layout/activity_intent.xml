@@ -31,5 +31,16 @@
             android:layout_height="wrap_content"
             android:text="@string/intent_browser"
             android:onClick="intentBrowser"/>
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/intent_contact"
+            android:onClick="intentContact"/>
+
+        <ListView
+            android:id="@+id/contact_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
