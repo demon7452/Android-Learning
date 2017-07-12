@@ -24,4 +24,5 @@
     <string name="intent_email">Email</string>
     <string name="intent_chooser">Open with</string>
     <string name="intent_contact">Contact</string>
+    <string name="button_permissions">Permissions</string>
 </resources>

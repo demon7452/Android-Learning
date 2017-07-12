@@ -11,6 +11,7 @@ import com.lixiong.googletraining.activities.DatabaseActivity;
 import com.lixiong.googletraining.activities.DisplayMessageActivity;
 import com.lixiong.googletraining.activities.FragmentActivity;
 import com.lixiong.googletraining.activities.IntentActivity;
+import com.lixiong.googletraining.activities.PermissionsActivity;
 
 import java.io.FileOutputStream;
 
@@ -46,6 +47,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void openIntent(View view){
         startActivity(new Intent(this, IntentActivity.class));
+    }
+
+    public void openPermissions(View view){
+        startActivity(new Intent(this, PermissionsActivity.class));
     }
 
     private void saveFile(String text){

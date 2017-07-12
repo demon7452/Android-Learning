@@ -35,4 +35,10 @@
         android:text="@string/button_intent"
         android:background="@mipmap/ic_launcher"
         android:onClick="openIntent"/>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_permissions"
+        android:onClick="openPermissions"/>
 </LinearLayout>

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="intent_contact">联系方式</string>
+    <string name="button_permissions">获取权限</string>
 </resources>
