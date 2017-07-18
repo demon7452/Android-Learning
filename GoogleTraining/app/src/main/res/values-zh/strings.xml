@@ -2,4 +2,5 @@
 <resources>
     <string name="intent_contact">联系方式</string>
     <string name="button_permissions">获取权限</string>
+    <string name="intent_camera">摄像头</string>
 </resources>

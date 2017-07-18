@@ -16,6 +16,7 @@ import com.lixiong.googletraining.R;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.jar.Manifest;
 
 public class IntentActivity extends AppCompatActivity {
 
@@ -108,6 +109,11 @@ public class IntentActivity extends AppCompatActivity {
         if(null != contactIntent.resolveActivity(getPackageManager())) {
             startActivityForResult(contactIntent, PICK_CONTACT_REQUEST);
         }
+    }
+
+    public void intentCamera(View view){
+        Intent intent = new Intent(android.Manifest.permission.CAMERA);
+        startActivityWithCheck(intent);
     }
 
     private void startActivityWithCheck(Intent intent){

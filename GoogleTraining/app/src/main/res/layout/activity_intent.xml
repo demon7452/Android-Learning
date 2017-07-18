@@ -38,6 +38,11 @@
             android:layout_height="wrap_content"
             android:text="@string/intent_contact"
             android:onClick="intentContact"/>
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/intent_camera"
+            android:onClick="intentCamera"/>
 
         <ListView
             android:id="@+id/contact_list"
